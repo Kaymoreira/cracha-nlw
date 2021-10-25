@@ -1,0 +1,263 @@
+/* Cascating Stylesheet */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  --black: hsla(240, 6%, 13%, 1);
+  --gray: hsla(240, 9%, 89%, 1);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  margin: 0;
+  background-color: #232327;
+}
+
+main {
+  background: url(./assets/fotos/background.svg) no-repeat center;
+  width: 375px;
+  min-height: 812px;
+  height: 780px;
+  border-radius: 5px;
+  box-shadow: 5px 15px 30px 5px rgb(0 0 0 / 70%);
+  border: 2px solid rgba(82, 82, 82, 0.2);
+}
+
+.container {
+  max-width: 250px;
+  max-height: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--gray);
+}
+
+div#colar {
+  margin-bottom: rem;
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+
+  object-fit: cover;
+
+  /* https://bennettfeely.com/clippy/ */
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+/* .avatar img.foto {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+} */
+
+h1 {
+  font: 700 1.5rem Roboto, sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.git img {
+  margin-right: 0.2rem;
+}
+
+a {
+  text-decoration: none;
+  font: 400 0.9rem Roboto, sans-serif;
+  margin-top: 0.25rem;
+  color: var(--gray);
+
+  display: flex;
+
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  margin-top: 3rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
+
+p {
+  font: 400 0.875rem Roboto, sans-serif;
+  margin-top: 2rem;
+}
+
+.do-while-logo {
+  position: relative;
+  top: -36rem;
+
+  left: 30px;
+  /* margin-left: -155px; */
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 20px 40px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Animations */
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.selo {
+  animation: loading 10s linear infinite;
+}
+
+#userPhoto {
+  transition: all ease 1s;
+}
+
+#userPhoto:hover {
+  width: 10rem;
+  height: 13rem;
+}
+
+.social-btn {
+  position: relative;
+  border-radius: 0.25rem;
+  width: 50px;
+  top: 0;
+  transition: all ease 0.3s;
+}
+.social-btn:hover {
+  border-radius: 50%;
+  top: -8px;
+}
+
+.youtube-img:hover {
+  box-shadow: 0rem 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.facebook-img:hover {
+  box-shadow: 0rem 5px 15px rgba(40, 103, 178, 0.5);
+}
+
+.instagram-img:hover {
+  box-shadow: 0rem 5px 15px rgba(116, 71, 12, 0.5);
+}
+
+.twitter-img:hover {
+  box-shadow: 0rem 5px 15px rgba(0, 172, 238, 0.5);
+}
+
+@media (min-width: 800px) {
+  /* estilos versão desktop */
+  main {
+    background: url(./assets/fotos/background.svg) no-repeat center/cover;
+    width: 32.375rem;
+    height: 20rem;
+    position: relative;
+    top: 0;
+    margin-top: 8.75rem;
+    display: grid;
+    place-items: center;
+    border: 2px solid rgb(79, 78, 78);
+  }
+
+  /* Animacao de gradiente para o background */
+  body {
+    background: linear-gradient(45deg, #e23e57, #88304e, #522546, #311d3f);
+    background-size: 400% 400%;
+    animation: colors 5s ease infinite;
+
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /* conteudo interno do cracha */
+  div.container {
+    max-height: 50rem;
+    height: 80rem;
+
+    position: absolute;
+
+    zoom: 140%;
+  }
+
+  .rope {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 750px;
+    background: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
+    border-radius: 0 0 3px 3px;
+    /* right: vw; */
+    top: -43rem;
+    margin-top: auto;
+    margin-left: auto;
+    /* margin-left: -40px; */
+  }
+
+  .clasp {
+    position: absolute;
+    background: #121214;
+    z-index: 1;
+    width: 100px;
+    height: 12px;
+    margin-left: auto;
+    margin-top: auto;
+    border-radius: 1.5rem;
+    top: 3.5rem;
+  }
+
+  .do-while-logo {
+    position: static;
+    margin: 28rem auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    box-shadow: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 320px;
+  }
+}
